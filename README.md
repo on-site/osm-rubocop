@@ -1,15 +1,13 @@
 # Osm::Rubocop
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/osm/rubocop`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+OSM default Rubocop config
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'osm-rubocop'
+gem 'osm-rubocop', require: false
 ```
 
 And then execute:
@@ -22,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add this line to the top of your project's .rubocop.yml:
+
+```ruby
+require: osm-rubocop
+```
 
 ## Development
 
@@ -32,10 +34,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/osm-rubocop.
+Bug reports and pull requests are welcome on GitHub at https://github.com/on-site/osm-rubocop.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
