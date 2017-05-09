@@ -20,11 +20,38 @@ Or install it yourself as:
 
 ## Usage
 
+#### Using osm-rubocop's rubocop configuration
+
 Add this line to the top of your project's .rubocop.yml:
 
 ```ruby
 require: osm-rubocop
 ```
+
+It will make osm-rubocop's configuration the default configuration for running rubocop.
+
+#### Adding a pre-commit hook
+
+If your project is a Rails application, add this to your Rakefile (above the call to `load_tasks`):
+
+```ruby
+require 'osm-rubocop'
+```
+
+If your project is not a Rails application, add this to your Rakefile:
+
+```ruby
+require 'osm-rubocop'
+load File.join Gem.loaded_specs['osm-rubocop'].full_gem_path, 'lib', 'tasks', 'osm_rubocop.rake'
+```
+
+Now you can create a pre-commit hook by running:
+
+```bash
+$ rake osm_rubocop:install_precommit_hook
+```
+
+This will install a pre-commit hook that will remind you to make sure there are no rubocop violations before each commit.
 
 ## Development
 
