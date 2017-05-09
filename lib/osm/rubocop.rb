@@ -1,4 +1,4 @@
-require "osm/rubocop/version"
+require 'osm/rubocop/version'
 require 'rubocop'
 
 module Osm

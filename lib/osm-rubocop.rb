@@ -1,3 +1,3 @@
 require 'osm/rubocop'
 
-Osm::Rubocop::inject_defaults!
+Osm::Rubocop.inject_defaults!
