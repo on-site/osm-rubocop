@@ -1,7 +1,17 @@
 require "osm/rubocop/version"
+require 'rubocop'
 
 module Osm
   module Rubocop
-    # Your code goes here...
+    CONFIG_FILE = File.join(
+      Gem.loaded_specs['osm-rubocop'].full_gem_path,
+      'config',
+      'default.yml'
+    ).freeze
+
+    def self.inject_defaults!
+      ::RuboCop::ConfigLoader.default_configuration =
+        ::RuboCop::ConfigLoader.configuration_from_file(CONFIG_FILE)
+    end
   end
 end
