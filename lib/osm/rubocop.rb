@@ -1,4 +1,5 @@
 require 'osm/rubocop/version'
+require 'osm/rubocop/railtie' if defined?(::Rails::Railtie)
 require 'rubocop'
 
 module Osm
