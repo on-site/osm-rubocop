@@ -7,7 +7,9 @@ OSM default Rubocop config
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'osm-rubocop', require: false
+group :development, :test do
+  gem 'osm-rubocop', require: false
+end
 ```
 
 And then execute:
@@ -35,7 +37,7 @@ It will make osm-rubocop's configuration the default configuration for running r
 If your project is a Rails application, add this to your Rakefile (above the call to `load_tasks`):
 
 ```ruby
-require 'osm-rubocop'
+require 'osm-rubocop' if Rails.env.development? || Rails.env.test?
 ```
 
 If your project is not a Rails application, add this to your Rakefile:
