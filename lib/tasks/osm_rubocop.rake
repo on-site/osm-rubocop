@@ -11,11 +11,7 @@ namespace :osm_rubocop do
     root = defined?(::Rails.root) ? ::Rails.root : Dir.pwd
     target = File.join(root, '.git', 'hooks', 'pre-commit')
 
-    # rubocop:disable Rails/SkipsModelValidations
-    # There's a false positive rubocop violation here.  See bug at:
-    # https://github.com/bbatsov/rubocop/issues/4260
     FileUtils.touch target
-    # rubocop:enable Rails/SkipsModelValidations
     FileUtils.chmod '+x', target
 
     source_content = File.read source
