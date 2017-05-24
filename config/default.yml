@@ -122,3 +122,6 @@ Style/SymbolArray:
 
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
+
+Style/YodaCondition:
+  Enabled: false
