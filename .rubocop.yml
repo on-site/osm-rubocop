@@ -1,5 +1,5 @@
 require: osm-rubocop
 
-Style/FileName:
+Naming/FileName:
   Exclude:
     - lib/osm-rubocop.rb
