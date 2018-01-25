@@ -16,6 +16,9 @@ Layout/AlignParameters:
 Layout/CaseIndentation:
   EnforcedStyle: end
 
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
 Layout/ExtraSpacing:
   AllowForAlignment: false
 
@@ -39,9 +42,6 @@ Layout/MultilineMethodDefinitionBraceLayout:
 
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
-
-Lint/EndAlignment:
-  EnforcedStyleAlignWith: variable
 
 Metrics/BlockLength:
   Exclude:
