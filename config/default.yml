@@ -16,6 +16,11 @@ Layout/AlignParameters:
 Layout/CaseIndentation:
   EnforcedStyle: end
 
+Layout/DotPosition:
+  # When the dot is trailing, you can copy multiple lines of code and paste them straight into
+  # irb/pry/rails-console.
+  EnforcedStyle: trailing
+
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
