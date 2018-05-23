@@ -7,8 +7,8 @@ AllCops:
   ExtraDetails: true
   Exclude:
     - db/schema.rb
-    - 'node_modules/**/*'
-    - 'vendor/**/*'
+    - node_modules/**/*
+    - vendor/**/*
 
 Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
@@ -65,6 +65,12 @@ Rails/HasAndBelongsToMany:
 Rails/SkipsModelValidations:
   Exclude:
     - db/migrate/**/*
+
+RSpec/AlignLeftLetBrace:
+  Enabled: false
+
+RSpec/AlignRightLetBrace:
+  Enabled: false
 
 RSpec/ImplicitExpect:
   EnforcedStyle: should
