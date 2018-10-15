@@ -10,6 +10,9 @@ AllCops:
     - node_modules/**/*
     - vendor/**/*
 
+Bundler/GemComment:
+  Enabled: false
+
 Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
@@ -48,6 +51,11 @@ Layout/MultilineMethodDefinitionBraceLayout:
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
+# Disable this until https://github.com/rubocop-hq/rubocop/issues/6387
+# is fixed.  Until then, this is more noise than legitimate errors
+Lint/NumberConversion:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
@@ -66,17 +74,36 @@ Rails/SkipsModelValidations:
   Exclude:
     - db/migrate/**/*
 
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - production
+    - staging
+    - test
+
 RSpec/AlignLeftLetBrace:
   Enabled: false
 
 RSpec/AlignRightLetBrace:
   Enabled: false
 
+RSpec/ContextWording:
+  Prefixes:
+    - for
+    - given
+    - in
+    - when
+    - with
+    - without
+
 RSpec/ImplicitExpect:
   EnforcedStyle: should
 
 RSpec/ExampleLength:
   Max: 5
+
+RSpec/ExpectChange:
+  EnforcedStyle: block
 
 RSpec/LetSetup:
   Enabled: false
@@ -88,6 +115,10 @@ RSpec/NamedSubject:
   Enabled: false
 
 RSpec/NestedGroups:
+  Enabled: false
+
+# RSpec already tells us that tests are pending
+RSpec/Pending:
   Enabled: false
 
 Style/BracesAroundHashParameters:
@@ -129,6 +160,14 @@ Style/ParallelAssignment:
 Style/RegexpLiteral:
   EnforcedStyle: slashes
   AllowInnerSlashes: true
+
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+# Many libraries, such as jwt and annotate_models, require passing arguments Hashes
+# with String keys.
+Style/StringHashKeys:
+  Enabled: false
 
 Style/SymbolArray:
   EnforcedStyle: brackets
