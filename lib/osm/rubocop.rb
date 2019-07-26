@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'osm/rubocop/version'
 require 'osm/rubocop/railtie' if defined?(::Rails::Railtie)
 require 'rubocop'

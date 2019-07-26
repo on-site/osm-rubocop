@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Osm
   module Rubocop
     class Railtie < Rails::Railtie
