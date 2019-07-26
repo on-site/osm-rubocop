@@ -166,10 +166,6 @@ Style/MissingElse:
 Style/ParallelAssignment:
   Enabled: false
 
-Style/RegexpLiteral:
-  EnforcedStyle: slashes
-  AllowInnerSlashes: true
-
 Style/RescueStandardError:
   EnforcedStyle: implicit
 
