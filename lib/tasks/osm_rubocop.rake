@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :osm_rubocop do
   desc 'Install a pre-commit hook that ensures the code adheres to the OSM Rubocop configuration'
   task :install_precommit_hook do
