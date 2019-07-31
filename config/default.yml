@@ -57,11 +57,6 @@ Layout/MultilineMethodDefinitionBraceLayout:
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
-# Disable this until https://github.com/rubocop-hq/rubocop/issues/6387
-# is fixed.  Until then, this is more noise than legitimate errors
-Lint/NumberConversion:
-  Enabled: false
-
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
@@ -128,7 +123,7 @@ RSpec/Pending:
   Enabled: false
 
 Style/BracesAroundHashParameters:
-  Enabled: false
+  EnforcedStyle: context_dependent
 
 Style/ClassAndModuleChildren:
   Enabled: false
