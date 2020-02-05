@@ -2,7 +2,9 @@
 
 namespace :osm_rubocop do
   desc 'Install a pre-commit hook that ensures the code adheres to the OSM Rubocop configuration'
+  # rubocop:disable Rails/RakeEnvironment (installing the pre-commit hook does not require loading a rails environment)
   task :install_precommit_hook do
+    # rubocop:enable Rails/RakeEnvironment
     source = File.join(
       Gem.loaded_specs['osm-rubocop'].full_gem_path,
       'lib',
