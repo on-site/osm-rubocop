@@ -5,7 +5,7 @@ require 'osm/rubocop/railtie' if defined?(::Rails::Railtie)
 require 'rubocop'
 
 module Osm
-  module Rubocop
+  module ::Osm::Rubocop
     CONFIG_FILE = File.join(
       Gem.loaded_specs['osm-rubocop'].full_gem_path,
       'config',

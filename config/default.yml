@@ -60,6 +60,20 @@ Layout/MultilineOperationIndentation:
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
+Lint/ConstantResolution:
+  inherit_mode:
+    merge:
+      - Only
+  Only:
+    - Rubocop
+
+Naming/MethodParameterName:
+  inherit_mode:
+    merge:
+      - AllowedNames
+  AllowedNames:
+    - as
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
@@ -122,9 +136,6 @@ RSpec/NestedGroups:
 RSpec/Pending:
   Enabled: false
 
-Style/BracesAroundHashParameters:
-  EnforcedStyle: context_dependent
-
 Style/ClassAndModuleChildren:
   Enabled: false
 
@@ -132,6 +143,9 @@ Style/ConstantVisibility:
   Enabled: false
 
 Style/Copyright:
+  Enabled: false
+
+Style/DisableCopsWithinSourceCodeDirective:
   Enabled: false
 
 Style/Documentation:
